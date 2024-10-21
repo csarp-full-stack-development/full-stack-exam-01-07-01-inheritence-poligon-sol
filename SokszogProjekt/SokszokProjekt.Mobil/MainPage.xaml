@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SokszokProjekt.Mobil.MainPage"
+             xmlns:viewmodel="clr-namespace:SokszogProjekt.NezetModel;assembly=SokszogProjekt.NezetModel">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Picker Title="Sokszög típusa" FontSize="16"
+                    ItemsSource="{Binding SokszogList}" SelectedItem="{Binding KijeloltElem}"/>
+            <Label Text="Oldal A"/>
+            <Editor Text="{Binding OldalA}" />
+            <Label Text="Oldal B"/>
+            <Editor Text="{Binding OldalB}" />
+            <Label Text="Oldal C"/>
+            <Editor Text="{Binding OldalC}" />
+            <Label Text="Kerület"/>
+            <Editor Text="{Binding Kerulet}" IsReadOnly="True"/>
+            <Label Text="Terület"/>
+            <Editor Text="{Binding Terulet}" IsReadOnly="True" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
