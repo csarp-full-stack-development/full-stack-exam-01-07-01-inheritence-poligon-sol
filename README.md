@@ -1,0 +1,1 @@
+# full-stack-exam-01-07-01-inheritence-poligon-sol
